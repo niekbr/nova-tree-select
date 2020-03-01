@@ -3,19 +3,18 @@
         <template slot="field">
             <treeselect v-model="value" :multiple="field.multiple || false" :options="field.options"></treeselect>
         </template>
-
     </default-field>
 </template>
 
 <script>
+import { FormField, HandlesValidationErrors } from "laravel-nova";
 import Treeselect from '@riophae/vue-treeselect'
 import '@riophae/vue-treeselect/dist/vue-treeselect.css'
 
 export default {
     components: { Treeselect },
-
+    mixins: [FormField, HandlesValidationErrors],
     props: ['resourceName', 'resourceId', 'field'],
-
     methods: {
         /*
          * Set the initial, internal value for the field.
