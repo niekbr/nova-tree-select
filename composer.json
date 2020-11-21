@@ -1,5 +1,5 @@
 {
-    "name": "niekbr/nova-tree-select",
+    "name": "sref/nova-tree-select",
     "description": "A Laravel Nova field to implement vue tree select",
     "keywords": [
         "laravel",
